@@ -128,7 +128,7 @@ static void subject_publish_callback(const ViconDriver::Subject &subject)
     vicon::Subject subject_ros;
     subject_ros.header.seq = subject.frame_number;
     subject_ros.header.stamp = ros::Time(subject.time_usec / 1e6);
-    subject_ros.header.frame_id = "/vicon";
+    subject_ros.header.frame_id = "vicon";
     subject_ros.name = subject.name;
     subject_ros.occluded = subject.occluded;
     subject_ros.position.x = position.x();
